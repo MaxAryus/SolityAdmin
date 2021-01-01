@@ -147,19 +147,21 @@ class _LoginState extends State<Login> {
 
     var body = response.body;
 
-    var token = jsonDecode(body)['token'];
+    var id = jsonDecode(body)['adminID'];
+    var token = jsonDecode(body)['response']['original']['token'];
 
     if (token != null) {
-      var firstname = jsonDecode(body)['user']['first_name'];
-      var lastname = jsonDecode(body)['user']['last_name'];
+      var firstname =
+          jsonDecode(body)['response']['original']['user']['first_name'];
+      var lastname =
+          jsonDecode(body)['response']['original']['user']['last_name'];
 
       final prefs = await SharedPreferences.getInstance();
 
       prefs.setString('firstname', firstname);
       prefs.setString('lastname', lastname);
       prefs.setString('token', token);
-
-      print(token);
+      prefs.setInt('id', id);
 
       return token;
     } else {

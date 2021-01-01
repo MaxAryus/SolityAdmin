@@ -32,7 +32,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   agora_rtc_engine: 59c240ba6fbe8e9fb680116828a5c0fec0b5937c
   AgoraRtcEngine_iOS_Crypto: 42a7a2142317c588f1b5c2e74b98fd01d73f8f60
-  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
   permission_handler: eac8e15b4a1a3fba55b761d19f3f4e6b005d15b6
   shared_preferences: af6bfa751691cdc24be3045c43ec037377ada40d
 

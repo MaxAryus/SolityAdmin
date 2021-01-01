@@ -387,6 +387,8 @@ class _AddEventState extends State<AddEvent> {
     var ending = etEnd.text.trim().toString();
     var cat = _getEventNumber();
     var description = etDescription.text.trim().toString();
+    final prefs = await SharedPreferences.getInstance();
+    var id = await prefs.getInt('id');
 
     http.Response response =
         await http.post('https://api.go-omi.com/createEvent', headers: {
@@ -398,7 +400,7 @@ class _AddEventState extends State<AddEvent> {
       'beginning': '$beginning',
       'ending': '$ending',
       'number_of_maximal_members': '$dropdownNumber',
-      'moderator': '1',
+      'moderator': '$id',
       'event_type': '0',
       'event_category': '$cat',
       'description': '$description'
