@@ -87,7 +87,7 @@ class _HomePageState extends State<HomePage> {
 
   Future getEventsForList() async {
     http.Response events = await http.get(
-      'http://api.go-omi.com/getAllEvents',
+      'https://api.go-omi.com/getAllEvents',
     );
 
     beginnings.clear();

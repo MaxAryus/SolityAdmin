@@ -435,7 +435,7 @@ class _CallScreebState extends State<CallScreeb> {
     var token = prefs.get('token');
 
     http.Response request =
-        await http.post('http://api.go-omi.com/signOutFromEvent', headers: {
+        await http.post('https://api.go-omi.com/signOutFromEvent', headers: {
       'Accept': 'application/json',
       'Authorization': 'Bearer $token'
     }, body: {
